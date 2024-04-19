@@ -1,0 +1,122 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.c-wide {
+	width: var(--site-width);
+	max-width: 1780px;
+	margin-inline: auto;
+}
+
+.container {
+	width: var(--site-width);
+	max-width: var(--site-max-width);
+	margin-inline: auto;
+}
+
+.prefix {
+	color: var(--color-1);
+	font-size: 14px;
+    line-height: 18px;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+	margin-bottom: 2.5rem;
+}
+
+.title-1 {
+	font-size: var(--font-size-1);
+	letter-spacing: -1.8px;
+}
+
+
+.title-2 {
+	font-size: var(--font-size-2);
+}
+
+.title-3 {
+	font-size: var(--font-size-3);
+}
+
+.title-4 {
+	font-size: var(--font-size-4);
+}
+
+.title-5 {
+	font-size: var(--font-size-5);
+}
+
+.title-6 {
+	font-size: var(--font-size-6);
+}
+
+.st_block {
+	position: relative;
+}
+
+p {
+	color: #817870;
+}
+
+
+.phone_btn, .email_btn {
+	display: inline-flex;
+	align-items: center;
+	color: #000;
+	font-size: 20px;
+	@include mob-only {
+		font-size: 14px;
+	}
+	&::before {
+		content: "";
+		display: inline-flex;
+		border: 1px solid var(--bg-1);
+		border-radius: 2px;
+		width: 5rem;
+		height: 5rem;
+		background: #fff;
+		margin-right: 2rem;
+		background-position: center;
+		background-repeat: no-repeat;
+		@include mob-only {
+			width: 4rem;
+			height: 4rem;
+			background-size: 2.5rem;
+		}
+	}
+}
+
+.phone_btn {
+	&::before {
+		background-image: url(../icons/phone.svg);
+	}
+}
+
+.email_btn {
+	&::before {
+		background-image: url(../icons/mail.svg);
+	}
+}
+
+.error404 {
+	article .container {
+		text-align: center;
+		h1 {
+			font-size: 30rem;
+			font-weight: 700;
+			@include tab-only {
+				font-size: 20rem;
+			}
+			@include mob-only {
+				font-size: 10rem;
+			}
+		}
+		h2 {
+			font-size: 7rem;
+			@include mob-only {
+				font-size: 5rem;
+			}
+		}
+	}
+}

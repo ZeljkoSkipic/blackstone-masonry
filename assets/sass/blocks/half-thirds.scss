@@ -1,0 +1,23 @@
+.st_half_thirds_inner {
+	@include flex;
+	.bottom {
+		@include flex-between;
+		margin-right: 0;
+		margin-left: auto;
+		> div {
+			width: 46%;
+			@include tab-max {
+				width: 100%;
+			}
+		}
+		.right {
+			@include flex-between;
+			> div {
+				width: 48%;
+				@include mob-only {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

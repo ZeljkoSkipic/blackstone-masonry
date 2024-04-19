@@ -1,0 +1,39 @@
+.st_brb_inner {
+	@include flex-between;
+	.left {
+		width: 30%;
+		@include tab-max {
+			width: 100%;
+		}
+	}
+	.right {
+		width: 65%;
+		@include tab-max {
+			width: 100%;
+		}
+	}
+	.boxes {
+		@include flex-between;
+	}
+	.box {
+		@include flex-center;
+		flex-direction: column;
+		width: 30%;
+		border: 2px solid var(--color-2);
+		padding: var(--space-4);
+		text-align: center;
+		margin-top: var(--space-4);
+		@include mob-only {
+			width: 100%;
+		}
+		@include tab-only {
+			padding-inline: 2rem;
+		}
+		svg {
+			width: 4rem;
+			height: auto;
+			margin-bottom: 3rem;
+
+		}
+	}
+}

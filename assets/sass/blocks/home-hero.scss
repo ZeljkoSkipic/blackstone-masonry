@@ -1,0 +1,63 @@
+.st_home_hero {
+	width: 100%;
+	background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(242,246,249,1) 100%);
+	box-sizing: border-box;
+	@include tab-max {
+		@include flex-col;
+	}
+	.block_bg {
+		z-index: 2;
+		@include limbo-min {
+			width: 50%;
+			left: auto;
+		}
+		@include tab-max {
+			height: 50svh;
+			top: auto;
+		}
+	}
+	@include limbo-min {
+		height: calc(100vh - 13.5rem);
+	}
+	.st_home_hero_inner {
+		height: 100%;
+		@include flex-col;
+		justify-content: center;
+		@include tab-max {
+			padding-bottom: calc(50svh + var(--space-3));
+			padding-bottom: 50svh;
+		}
+		.st_home_hero_content {
+			@include limbo-min {
+				width: 48%;
+			}
+		}
+		.hero_title {
+			font-size: 8rem;
+			font-weight: 700;
+			line-height: 1;
+			margin-bottom: var(--space-4);
+			max-width: 70rem;
+			word-wrap: break-word;
+			@include limbo-only {
+				font-size: 6rem;
+			}
+			@include tab-only {
+				font-size: 6rem;
+			}
+			@include mob-only {
+				font-size: 5rem;
+			}
+		}
+		.hero_text {
+			margin-bottom: var(--space-4);
+			@include limbo-max {
+				font-size: 16px;
+				line-height: 1.4;
+			}
+			p {
+				margin-top: 0;
+			}
+		}
+	}
+}

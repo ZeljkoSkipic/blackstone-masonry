@@ -1,0 +1,21 @@
+.st_info_boxes {
+	.st_info_boxes_inner {
+		@include flex;
+		text-align: center;
+		figure {
+			margin-bottom: var(--space-4);
+		}
+		.icon_media {
+			.ib_image {
+				aspect-ratio: 4 / 3;
+				width: 8rem;
+				object-fit: contain;
+			}
+		}
+		.st_col {
+			.st_col_title {
+				font-size: var(--font-size-3);
+			}
+		}
+	}
+}

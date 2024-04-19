@@ -1,0 +1,31 @@
+.st_cta_inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	@include tab-max {
+		flex-direction: column;
+	}
+	.right {
+		@include limbo-min {
+			min-width: 20%;
+			flex-shrink: 0;
+		}
+		@include tab-max {
+			margin-top: var(--space-4);
+		}
+	}
+	h2 {
+		line-height: 1.2;
+		flex-shrink: 1;
+		@include tab-max {
+			text-align: center;
+		}
+	}
+
+	.cta_btn {
+		border: 2px solid #000;
+		color: #000;
+		padding: 1.5rem 2.5rem;
+		margin-left: 3rem;
+	}
+}

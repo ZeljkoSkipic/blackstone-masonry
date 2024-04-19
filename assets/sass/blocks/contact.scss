@@ -1,0 +1,33 @@
+.st_contact_inner {
+	@include limbo-min {
+		@include flex-between;
+		> div {
+			width: 46%;
+		}
+	}
+	.info_text {
+		@include flex;
+		color: #000;
+		margin-bottom: 16px;
+		img {
+			width: 24px;
+			object-fit: contain;
+			margin-right: 24px;
+
+		}
+	}
+	input, textarea {
+		font-size: 16px;
+		padding: 12px 24px;
+		border-width: 0 0 1px 0;
+		background-color: transparent;
+		&:focus, &:active {
+			outline: none;
+			border-width: 0 0 2px 0!important;
+		}
+	}
+	button {
+		@include btn-1;
+		cursor: pointer;
+	}
+}
